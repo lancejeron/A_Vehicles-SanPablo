@@ -1,0 +1,34 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content 
+    link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/tables.css")
+    h1.title LIST OF CARS
+    hr  
+    
+    ul
+        //- This is how we iterate through arrays and access
+        //- their element
+    <table border = "3">
+        thead
+            tb 
+                th ID
+                th Make
+                th Model 
+                th Year 
+            each user in users
+                    tr
+                        td= user.id 
+                        td= user.make
+                        td= user.model
+                        td= user.year
+
+    //- a(class='button', href='') UPDATE
+    //- a(class='button', href='') DELETE
+    a(class='button', href='/details') DETAILS                      
+                    
+
+  
+
+            //- `- ${user.make} - ${user.model} - ${user.year} - ${user.plate_number} - ${user.vcondition}`

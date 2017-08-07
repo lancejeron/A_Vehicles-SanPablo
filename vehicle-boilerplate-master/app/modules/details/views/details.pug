@@ -1,0 +1,22 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content 
+    h1.title DETAILS
+    hr  
+    
+    ul
+        //- This is how we iterate through arrays and access
+        //- their element
+    <table border = "3">
+        thead
+            tb 
+                th ID
+                th PLATE NUMBER
+                th CONDITION
+            each user in users
+                    tr  
+                        td=user.id
+                        td= user.plate_number
+                        td= user.vcondition

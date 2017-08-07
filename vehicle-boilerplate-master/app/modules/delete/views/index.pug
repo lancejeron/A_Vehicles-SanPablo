@@ -1,0 +1,24 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content
+    h1.title Delete
+    hr
+
+    ul
+    form(method="POST" action="delete/delete")
+        .field
+            .label delete
+            .control
+                input.input(type="number" placeholder="ID" name="id")
+                input(type="submit" value="Submit")
+        //- This is how we iterate through arrays and access
+        //- their element
+    //- each user in users
+    //-          li= `${user.id} - ${user.make} - ${user.model} - ${user.year} - ${user.plate_number} - ${user.vcondition}`
+         
+    //- a(class='button', href='/view') VIEW
+    //- br
+    //- br
+    //- a(class='button', href='/users/new') ADD

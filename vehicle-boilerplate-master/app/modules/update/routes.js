@@ -28,8 +28,9 @@ router.get('/update', (req, res) => {
 });
 
 router.post('/update', (req, res) => {
+    // console.log('dito na ako');
     var db = require('../../lib/database')();
-    db.query(`UPDATE users SET year = `+ `${req.body.year}`+ ` WHERE id=` + `${req.body.id}`, function(err, results, fields) {
+    db.query(`UPDATE users SET year = '${req.body.year}',make = '${req.body.make}',model = '${req.body.model}',plate_number= '${req.body.plate_number}',vcondition = '${req.body.vcondition}' WHERE id='${req.body.id}'`, function(err, results, fields) {
         if (err) console.log(err);
         res.redirect('/index');
     });

@@ -4,9 +4,11 @@
 
 html
     head
+        body
+            block content
         
-        // This is the title of the page. Pretty basic.
-        title Express Boilerplate
+                // This is the title of the page. Pretty basic.
+            title Express Boilerplate
 
         // Here we import the asset files such as Bulma and FontAwesome.
         // You can use this out of the box. This btw, is an HTML comment
@@ -16,14 +18,5 @@ html
         link(rel="stylesheet" href="/assets/bulma/bulma.css")
         link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/font-awesome.min.css")
         link(rel="stylesheet" href="/assets/font-awesome-4.7.0/css/style.css")
-    body 
-        // I'm using Bulma's classes here.
-        // Refer to this: http://bulma.io/documentation/layout/container/
-        div.section
-            div.container
-                //- This part right here is the dynamic content. Once you extend
-                //- this template, you can place anything here.
-                
-                // This comment marks the dynamic content
-                block content
+
                 

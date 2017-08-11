@@ -2,7 +2,7 @@
 extends ../../../templates/master.pug
 //- This is how we insert dynamic content to extended templates
 block content
-   
+    br
     h1.title Welcome to Kotse Mo to!
     hr
 
@@ -12,13 +12,8 @@ block content
     //- each user in users
     //-          li= `${user.id} - ${user.make} - ${user.model} - ${user.year} - ${user.plate_number} - ${user.vcondition}`
          
-    a(class='button', href='/view') VIEW 
-    br
-    br
-    a(class='button', href='/users/new') ADD
-    br
-    br
-    a(class='button', href='/delete') DELETE
-    br
-    br
-    //- a(class='button', href='/update') UPDATE
+    p 
+        a(class='button', href='/view') VIEW &nbsp &nbsp 
+        a(class='button', href='/users/new') ADD &nbsp &nbsp 
+        a(class='button', href='/delete') DELETE &nbsp &nbsp 
+        a(class='button', href='/update') UPDATE 
